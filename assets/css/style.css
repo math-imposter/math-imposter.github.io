@@ -104,7 +104,7 @@ pre, code {
   color: #aaa;
 }
 
-/*h3:hover .anchor-link {*/
-/*  visibility: visible;*/
-/*}*/
+h3:hover .anchor-link {
+  visibility: visible;
+}
 
