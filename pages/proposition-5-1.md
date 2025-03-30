@@ -3,9 +3,9 @@ layout: default
 title: Proposition 5.1
 ---
 
-# Proposition 5.1
+## Proposition 5.1
 
-## Extended proof of Proposition 5.1 with \( m^* \)
+### Extended proof of Proposition 5.1 with \( m^* \)
 
 We define \( m^* \) to be the smallest value such that \( m^* P_{\text{all}} \) is a p-variable, meaning that:
 
@@ -51,7 +51,7 @@ $$
 
 leads to a coverage guarantee of \( 1 - (m' + \alpha) \). We focus on the scale correction factor \( m^* \) because it aligns with the framework of [Vovk and Wang (2020)](https://proceedings.mlr.press/v108/vovk20a.html) and works well in practice.
 
-## Finite-sample statement with \( \widehat{m}^* \)
+### Finite-sample statement with \( \widehat{m}^* \)
 
 We define \( \widehat{m}^* \) to be the smallest value such that \( \widehat{m}^* \widehat{P}_{\text{all}} \) is a p-variable, where \( \widehat{P}_{\text{all}} \) is the empirical random variable associated with \( \widehat{F}^{\text{cons}}_{P_{\text{all}}} \).
 

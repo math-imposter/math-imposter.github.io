@@ -1,9 +1,28 @@
-title: My Static Site
-description: A clean Jekyll website
-baseurl: ""
-url: ""
+title: "Anonymous Submission"
+description: "Supporting material for submission ZZZZ"
+baseurl: "" # leave blank for GitHub Pages root
+url: "https://YOUR_GITHUB_USERNAME.github.io"
 
 markdown: kramdown
-
 kramdown:
   math_engine: mathjax
+
+# Include custom pages
+include:
+  - pages
+
+# Plugins
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-include-cache
+
+# Defaults for _pages
+defaults:
+  - scope:
+      path: "pages"
+      type: pages
+    values:
+      layout: single
+      author_profile: false
+      math: true # enables MathJax globally
