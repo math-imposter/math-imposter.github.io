@@ -96,19 +96,6 @@ pre, code {
     }
 }
 
-/*.anchor-link {*/
-/*  margin-left: 8px;*/
-/*  text-decoration: none;*/
-/*  font-size: 0.75em;*/
-/*  color: #333;*/
-/*  visibility: visible;*/
-/*  font-family: sans-serif;*/
-/*}*/
-
-/*.anchor-link:hover {*/
-/*  color: #000;*/
-/*}*/
-
 .anchor-link {
   margin-right: 8px;
   text-decoration: none;
@@ -122,4 +109,9 @@ pre, code {
 
 .anchor-link:hover {
   opacity: 1;
+}
+
+.anchor-link i {
+  font-style: normal;
+  vertical-align: middle;
 }
