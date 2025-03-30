@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ page.title }} | {{ site.title }}</title>
+  <link rel="stylesheet" href="{{ "/assets/css/style.css" | relative_url }}">
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+
+<body>
+<div id="container">
+  <div id="layout-menu">
+    <div class="menu-category">Navigation</div>
+    <div class="menu-item"><a href="{{ "/" | relative_url }}">Home</a></div>
+    <div class="menu-item"><a href="{{ "/about" | relative_url }}">About</a></div>
+    <div class="menu-item"><a href="{{ "/math" | relative_url }}">Math Example</a></div>
+  </div>
+
+  <div id="layout-content">
+    {{ content }}
+  </div>
+</div>
+</body>
+</html>

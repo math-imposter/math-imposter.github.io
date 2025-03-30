@@ -1,0 +1,9 @@
+title: My Static Site
+description: A clean Jekyll website
+baseurl: ""
+url: ""
+
+markdown: kramdown
+
+kramdown:
+  math_engine: mathjax
