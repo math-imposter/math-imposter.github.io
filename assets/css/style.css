@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
     font-family: Georgia, serif;
     margin: 0;
@@ -17,6 +21,7 @@ body {
     border-right: 1px solid #ddd;
     padding: 15px;
     width: 200px;
+    overflow-wrap: break-word; /* prevents overflow from long equations/links */
 }
 
 .menu-category {
