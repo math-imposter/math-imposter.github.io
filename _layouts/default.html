@@ -8,9 +8,11 @@
   <script>
   window.MathJax = {
     tex: {
-      tags: 'ams',
-      inlineMath: [['\\(', '\\)'], ['$', '$']],
+      inlineMath: [['\\(', '\\)']],  // $...$ sometimes conflicts with Markdown parsers like Kramdown
       displayMath: [['\\[', '\\]'], ['$$', '$$']],
+      processEscapes: true,          // allow \\, \{, \} to  be passed through to MathJax
+      tags: 'ams',                   // number only \begin{equation}...\end{equation}
+      packages: ['base', 'ams']      // include AMS environments (like equation*)
     },
   };
   </script>
