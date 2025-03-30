@@ -40,7 +40,7 @@ Note that other transformations of \(P_{\text{all}}\) can also yield valid p-var
 \end{equation*}
 leads to a coverage guarantee of \(1 - (m' + \alpha)\). We focus on the scale correction factor \(m^*\) because it aligns with the framework of Vovk and Wang (2020) and works well in practice.
 
-<h3>Finite-sample statement with \( \widehat{m}^* \)</h3>
+<h3 style="margin-top: 2em;">Finite-sample statement with \( \widehat{m}^* \)</h3>
 
 We define \(\widehat{m}^*\) to be the smallest value such that \(\widehat{m}^* \widehat{P}_{\text{all}}\) is a p-variable, where \(\widehat{P}_{\text{all}}\) is the empirical random variable associated with \(\widehat{F}^{\text{cons}}_{P_{\text{all}}}\).
 
@@ -60,9 +60,9 @@ Markov's inequality tells us that
 \end{equation*}
 
 Combining these observations with \eqref{eq:mhat_first_bound}, we obtain
-\begin{equation} \label{eq:mhat_intermediate_bound}
+\begin{equation*}
 \mathbb{P}(\widehat{P}_{\text{all}} \leq \alpha) \leq s + \frac{\alpha \mathbb{E}[\widehat{m}]}{s},
-\end{equation}
+\end{equation*}
 which holds for any \(s > 0\).
 
 We optimize by minimizing the RHS over \(s\). The minimum of \(s + \frac{c}{s}\) occurs at \(s = \sqrt{c}\), so we choose \(s = \sqrt{\alpha \mathbb{E}[\widehat{m}]}\), which gives the bound
