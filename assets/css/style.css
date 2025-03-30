@@ -100,11 +100,12 @@ pre, code {
   margin-left: 8px;
   text-decoration: none;
   font-size: 0.75em;
-  visibility: hidden;
-  color: #aaa;
+  color: #666; /* consistent, subtle gray */
+  visibility: visible; /* always visible */
+  font-family: sans-serif;
 }
 
-h3:hover .anchor-link {
-  visibility: visible;
-}
+/*h3:hover .anchor-link {*/
+/*  visibility: visible;*/
+/*}*/
 
