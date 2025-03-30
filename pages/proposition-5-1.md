@@ -1,8 +1,8 @@
 ---
 layout: default
-title: About
+title: Proposition 5.1
 ---
 
-## About Me
+## Proposition 5.1
 
 This site was created to demonstrate a Jekyll site **without a blog structure**.
