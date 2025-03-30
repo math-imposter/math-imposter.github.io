@@ -96,16 +96,30 @@ pre, code {
     }
 }
 
-.anchor-link {
-  margin-left: 8px;
-  text-decoration: none;
-  font-size: 0.75em;
-  color: #666; /* consistent, subtle gray */
-  visibility: visible; /* always visible */
-  font-family: sans-serif;
-}
-
-/*h3:hover .anchor-link {*/
+/*.anchor-link {*/
+/*  margin-left: 8px;*/
+/*  text-decoration: none;*/
+/*  font-size: 0.75em;*/
+/*  color: #333;*/
 /*  visibility: visible;*/
+/*  font-family: sans-serif;*/
 /*}*/
 
+/*.anchor-link:hover {*/
+/*  color: #000;*/
+/*}*/
+
+.anchor-link {
+  margin-right: 8px;
+  text-decoration: none;
+  font-size: 0.75em;
+  color: #003366; /* dark blue */
+  font-weight: bold;
+  font-family: sans-serif;
+  opacity: 0.7;
+  transition: opacity 0.2s;
+}
+
+.anchor-link:hover {
+  opacity: 1;
+}
