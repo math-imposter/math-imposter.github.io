@@ -27,7 +27,7 @@ For the sake of conciseness, let
 \begin{equation*}
     \widehat{F}_i := \widehat{F}_{p_{\text{all}}}(p_{\text{all}}\left(X_i, Y_i\right)).
 \end{equation*}
-Since \(\widehat{F}_{p_{\text{all}}}\) is a right-continuous step function that only jumps at the observed values \(\{p_{\text{all}}(X_i, Y_i) : i \in S_{\text{merge}}\}\), the supremum in \eqref{eq:scale_sup} is attained at one of these points. In fact, for any \(\delta\) not equal to one of these values, shifting \(\delta\) slightly to the right (toward the next jump) increases the denominator without changing the numerator, thus decreasing the ratio. Therefore, it suffices to take the maximum over the observed p-values, yielding the empirical merging factor
+Since \(\widehat{F}_{p_{\text{all}}}\) is a right-continuous step function that only jumps at the observed values \(\{p_{\text{all}}(X_i, Y_i) : i \in S_{\text{merge}}\}\), the supremum in \eqref{eq:mstar_sup} is attained at one of these points. In fact, for any \(\delta\) not equal to one of these values, shifting \(\delta\) slightly to the right (toward the next jump) increases the denominator without changing the numerator, thus decreasing the ratio. Therefore, it suffices to take the maximum over the observed p-values, yielding the empirical merging factor
 \begin{equation*}
 \widehat{m}^* = \max_{\substack{i \in S_{\text{merge}} \\[1pt] p_{\text{all}}(X_i, Y_i) > 0}} \frac{\widehat{F}_i}{p_{\text{all}}(X_i, Y_i)}.
 \end{equation*}

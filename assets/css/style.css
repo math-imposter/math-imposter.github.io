@@ -99,9 +99,9 @@ pre, code {
 .anchor-link {
   margin-left: 8px;
   text-decoration: none;
-  font-size: 0.8em;
+  font-size: 0.75em;
   visibility: hidden;
-  color: #888;
+  color: #aaa;
 }
 
 h3:hover .anchor-link {
