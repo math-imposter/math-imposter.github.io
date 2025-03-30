@@ -2,7 +2,4 @@
 layout: default
 title: Home
 ---
-
-## Additional materials
-
-Additional materials for ICML discussion period. Please see sidebar for links.
+This anonymous website contains additional materials for the ICML 2025 discussion period. Please use the sidebar for navigation.
