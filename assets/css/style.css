@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
     font-family: Georgia, serif;
     margin: 0;
@@ -17,7 +21,8 @@ body {
     border-right: 1px solid #ddd;
     padding: 15px;
     width: 200px;
-    overflow-wrap: break-word; /* prevents overflow from long equations/links */
+    flex: 0 0 200px; /* prevents sidebar resizing */
+    overflow-wrap: break-word;
 }
 
 .menu-category {
@@ -44,7 +49,8 @@ body {
 
 #layout-content {
     padding: 20px;
-    flex-grow: 1;
+    flex: 1;
+    overflow: auto; /* add scrollbar only if needed */
 }
 
 h1, h2, h3 {
