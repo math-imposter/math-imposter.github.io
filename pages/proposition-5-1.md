@@ -7,22 +7,37 @@ title: Proposition 5.1
 
 ### Extended proof of Proposition 5.1 with \( m^* \)
 
-We define $m^*$ to be the smallest value such that $m^* P_{\text{all}}$ is a p-variable, meaning that
+We define \( m^* \) to be the smallest value such that \( m^* P_{\text{all}} \) is a p-variable, meaning that
+
+<script type="math/tex; mode=display">
 \begin{equation*}
 \mathbb{P}\left\{ m^* P_{\text{all}} \le \alpha \right\} \le \alpha.
 \end{equation*}
+</script>
+
 We can rearrange this condition to be
+
+<script type="math/tex; mode=display">
 \begin{equation*}
 \mathbb{P}\left\{ P_{\text{all}} \le \frac{\alpha}{m^*} \right\} \le \alpha;
 \end{equation*}
-if we define $\epsilon = \alpha / m^*$, this becomes
+</script>
+
+If we define \( \epsilon = \alpha / m^* \), this becomes
+
+<script type="math/tex; mode=display">
 \begin{equation*}
 \mathbb{P}\left\{ P_{\text{all}} \le \epsilon \right\} \le m^* \epsilon,
 \end{equation*}
+</script>
+
 or, equivalently,
+
+<script type="math/tex; mode=display">
 \begin{equation*}
 \mathbb{P}\left\{ P_{\text{all}} > \epsilon \right\} \ge 1 - m^* \epsilon.
 \end{equation*}
+</script>
 
 Let $p_{\text{all}}(x, y)$ denote the function corresponding to $P_{\text{all}}$. Then the prediction set
 \begin{equation*}
