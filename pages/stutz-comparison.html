@@ -43,9 +43,21 @@ In the experiments below, we call the [Stutz’23] proposed finite-sample ECDF m
   </a>
 </h3>
 
+<p>
+In this section, we examin why the finite-sample ECDF variant, ECDF-DKW, is so conservative.
+</p>
+
+<p>
+Recall that we add a finite-sample adjustment $\epsilon$ to the empirical CDF $\widehat{F}(P_{all})$, and then compare this quantity to some significance level $\alpha$. That is, the prediction set with finite-sample guarantees is the set of all labels such that $\widehat{F}(P_{\text{avg}}^i) + \epsilon > \alpha$. However, if $\epsilon$ is already greater than $\alpha$, then <i>all</i> labels are included in the prediction set, and it becomes unbounded.
+</p>
+
+<p>
+The finite-sample adjustment $\epsilon$ is a function of the number of samples used to compute the empirical CDF. We find that when this number is less than 1000, there is almost no chance of getting a prediction set that is less than the entirety of the label space.
+</p>
+
 <div>
   <img src="/assets/images/fig_dkw.png" alt="Figure 3" style="max-width: 100%; height: auto;">
   <p>
-    Figure 3: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    Figure 3: This plot illustrates how the finite-sample adjustment \(\epsilon\) changes with the number of samples used to compute the empirical CDF, \(|S_{merge}|\), and the user-selected significance level \(\delta\). In [Stutz'23], \(\epsilon\) is the offset required to ensure a finite sample guarantee of \((1-\alpha)(1-\delta)\). Note that if you offset by more than \(\alpha\), then you have an unbounded prediction set with 100% coverage.
   </p>
 </div>
