@@ -11,21 +11,21 @@ The ECDF method proposed by [Stutz’23] was originally developed for a differen
 </p>
 
 <p>
-While the focus of [Stutz’23] is on aggregating p-values across sampled labels, their ECDF transformation is general enough to be applied to the weighted average of p-values as well. This allows us to adapt it to our setting, where each p-value corresponds to a different prediction model or expert. This page presents additional experimental results where we apply the [Stutz’23] ECDF method to recreate the main findings of our paper under this alternative aggregation scheme.
+While the focus of [Stutz’23] is on aggregating p-values across sampled labels, their ECDF transformation is general enough to be applied to the weighted average of p-values as well. This allows us to adapt it to our setting, where each p-value corresponds to a different prediction model or expert. This page presents additional experimental results where we apply the [Stutz’23] ECDF method to recreate the main findings of our paper with their alternative transformation.
 </p>
 
 <p>
-In their paper, [Stutz’23] note that the coverage guarantee using the true CDF holds only asymptotically, as the empirical CDF \(\widehat{F}\) approaches the true CDF \(F\). To establish a finite-sample guarantee, they introduce a DKW-derived correction \(\epsilon\) and construct the prediction sets based on \(\widehat{F} + \epsilon\). We find that, although their proposed prediction set yields an elegant \((1-\alpha)(1-\delta)\) finite-sample guarantee, the \(\epsilon\) correction is extremely conservative in practice.
+In their paper, [Stutz’23] note that the coverage guarantee using the true CDF holds only with an asymptotic number of samples, as the empirical CDF \(\widehat{F}\) approaches the true CDF \(F\). To establish a finite-sample guarantee, they introduce a DKW-derived correction \(\epsilon\) and construct the prediction sets based on \(\widehat{F} + \epsilon\). We find that, although their proposed prediction set yields an elegant \((1-\alpha)(1-\delta)\) finite-sample guarantee, the \(\epsilon\) correction is extremely conservative in practice.
 </p>
 
 <p>
-In the experiments below, we call the [Stutz’23] ECDF method as "ECDF", and the variant with finite-sample guarantees as "ECDF-DKW".
+In the experiments below, we call the [Stutz’23] proposed finite-sample ECDF method as "ECDF-DKW", and the variant without the DKW correction as simply "ECDF".
 </p>
 
 <div>
   <img src="/assets/images/fig2_regression.png" alt="Figure 1" style="max-width: 57%; height: auto;">
   <p>
-    Figure 1: This is a recreation of the regression experiments in Figure 2 of our submission. Please note that ...
+    Figure 1: This is a recreation of the regression experiments in Figure 2 of our submission, with the ECDF and ECDF-DKW methods of [Stutz’23]. We note that the ECDF method performs very similarly to our WA precise method in terms of coverage, WS coverage, and prediction set size. (Left column) like WA precise, the ECDF method's marginal coverage is more conservative than split conformal, but less conservative than the WA targeted methods. (Center column) however, ECDF enjoys better WS coverage than split conformal, although it still often falls short of the $1-\alpha$ guarantee on the WS slab. Meanwhile, ECDF-DKW is so conservative that for the UCI datasets with limited calibration data, its prediction sets cover the entire label space. We therefore represent this with 100% coverage on both the coverage (left) and WS coverage (center) plots, and we do not plot the ECDF-DKW prediction set sizes (right column).
   </p>
 </div>
 
