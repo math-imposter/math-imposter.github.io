@@ -48,7 +48,7 @@ In this section, we examine why the finite-sample ECDF variant, ECDF-DKW, is so 
 </p>
 
 <p>
-Recall that [Stutz'23] use DKW to add a finite-sample adjustment \(\epsilon\) to the empirical CDF \(\hat{F}(P_{\text{all}})\), and then compare this sum to the significance level \(\alpha\). The prediction set with finite-sample guarantees is therefore the set of all labels such that \(\hat{F}(P_{\text{avg}}) + \epsilon > \alpha\). However, if \(\epsilon\) is already greater than \(\alpha\), then this condition is always satisfied and the prediction set includes <i>all</i> labels, becoming unbounded.
+Recall that [Stutz'23] use DKW to add a finite-sample adjustment \(\epsilon\) to the empirical CDF \(\widehat{F}(P_{\text{all}})\), and then compare this sum to the significance level \(\alpha\). The prediction set with finite-sample guarantees is therefore the set of all labels such that \(\widehat{F}(P_{\text{avg}}) + \epsilon > \alpha\). However, if \(\epsilon\) is already greater than \(\alpha\), then this condition is always satisfied and the prediction set includes <i>all</i> labels, becoming unbounded.
 </p>
 
 <p>
@@ -58,6 +58,6 @@ The finite-sample adjustment \(\epsilon\) is a function of the number of samples
 <div>
   <img src="/assets/images/fig_dkw.png" alt="Figure 3" style="max-width: 100%; height: auto;">
   <p>
-    Figure 3: This plot shows how the finite-sample adjustment \(\epsilon\) changes with the number of samples used to compute the empirical CDF, \(|S_{merge}|\), and the user-selected significance level \(\delta\). In [Stutz'23], \(\epsilon\) is the offset required to ensure a finite sample guarantee of \((1-\alpha)(1-\delta)\). Dashed lines represent \(\alpha\) levels of 0.05 and 0.1. When \(\epsilon > \alpha\), the prediction set becomes unbounded, including all labels and yielding 100% coverage.
+    Figure 3: This plot shows how the finite-sample adjustment \(\epsilon\) changes with the number of samples used to compute the empirical CDF, \(|S_{\text{merge}}|\), and the user-selected significance level \(\delta\). In [Stutz'23], \(\epsilon\) is the offset required to ensure a finite sample guarantee of \((1-\alpha)(1-\delta)\). Dashed lines represent \(\alpha\) levels of 0.05 and 0.1. When \(\epsilon > \alpha\), the prediction set becomes unbounded, including all labels and yielding 100% coverage.
   </p>
 </div>
