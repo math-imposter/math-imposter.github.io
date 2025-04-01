@@ -6,14 +6,16 @@ permalink: /stutz-comparison
 
 <h2>Comparison with <i>Conformal Prediction under Ambiguous Ground Truth</i> (Stutz et al., 2023)</h2>
 
-The ECDF method proposed by [Stutz’23] was originally developed for a different setting than ours, where they study the problem of uncertainty in the ground truth labels. In their framework, each calibration point consists only of an input $X_i$; they sample $m$ labels to get $m$ p-values for each calibration point, and then take the unweighted average of these p-values. Let us denote this unweighted average as $P_{avg}^i$, with distribution function $F$. Their ECDF method transforms $P_{avg}^i$ into a valid p-value via $F(P_{avg}^i)$, and the prediction set is then the set of all labels such that the corrected p-value $F(P_{avg}^i)$ corresponding to each sample is greater than some threshold $\alpha$.
+The ECDF method proposed by [Stutz’23] was originally developed for a different setting than ours, where they study the problem of uncertainty in the ground truth labels. In their framework, each calibration point consists only of an input \(X_i\); they sample \(m\) labels to get \(m\) p-values for each calibration point, and then take the unweighted average of these p-values. Let us denote this unweighted average as \(P_{\text{avg}}^i\), with distribution function \(F\). Their ECDF method transforms \(P_{\text{avg}}^i\) into a valid p-value via \(F(P_{\text{avg}}^i)\), and the prediction set is then the set of all labels such that the corrected p-value \(F(P_{\text{avg}}^i)\) corresponding to each sample is greater than some threshold \(\alpha\).
 
 While the focus of [Stutz’23] is on aggregating p-values across sampled labels, their ECDF transformation is general enough to be applied to the weighted average of p-values as well. This allows us to adapt it to our setting, where each p-value corresponds to a different prediction model or expert. This page presents additional experimental results where we apply the [Stutz’23] ECDF method to recreate the main findings of our paper under this alternative aggregation scheme.
+
+In their paper, [Stutz’23] note that the coverage guarantee using the true CDF holds only asymptotically, as the empirical CDF \(\hat{F}\) approaches the true CDF $F$. To establish a finite-sample guarantee, they introduce a DKW-derived correction $\epsilon$ and construct the prediction sets based on \(\hat{F} + \epsilon\). We find that, although their proposed prediction set yields an elegant \((1-\alpha)(1-\delta)\) finite-sample guarantee, the \(\epsilon\) correction is extremely conservative in practice.
 
 <div>
   <img src="/assets/images/fig2_regression.png" alt="Figure 1" style="max-width: 57%; height: auto;">
   <p>
-    Figure 1: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    Figure 1: This is a recreation of the regression experiments in Figure 2 of our submission. Please note that ...
   </p>
 </div>
 
@@ -23,6 +25,13 @@ While the focus of [Stutz’23] is on aggregating p-values across sampled labels
     Figure 2: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
   </p>
 </div>
+
+<h3 id="ECDF-finite">
+  Why is the finite-sample ECDF variant so conservative?
+  <a href="#ECDF-finite" class="anchor-link" aria-label="Link to Section: Why is the finite-sample ECDF variant so conservative?">
+    <i class="fas fa-link"></i>
+  </a>
+</h3>
 
 <div>
   <img src="/assets/images/fig_dkw.png" alt="Figure 3" style="max-width: 100%; height: auto;">
