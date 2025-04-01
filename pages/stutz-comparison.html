@@ -48,11 +48,11 @@ In this section, we examin why the finite-sample ECDF variant, ECDF-DKW, is so c
 </p>
 
 <p>
-Recall that we add a finite-sample adjustment $\epsilon$ to the empirical CDF $\widehat{F}(P_{all})$, and then compare this quantity to some significance level $\alpha$. That is, the prediction set with finite-sample guarantees is the set of all labels such that $\widehat{F}(P_{\text{avg}}^i) + \epsilon > \alpha$. However, if $\epsilon$ is already greater than $\alpha$, then <i>all</i> labels are included in the prediction set, and it becomes unbounded.
+Recall that we add a finite-sample adjustment \(\epsilon\) to the empirical CDF \(\widehat{F}(P_{all})\), and then compare this quantity to some significance level \(\alpha\). That is, the prediction set with finite-sample guarantees is the set of all labels such that \(\widehat{F}(P_{\text{avg}}^i) + \epsilon > \alpha\). However, if \(\epsilon\) is already greater than \(\alpha\), then <i>all</i> labels are included in the prediction set, and it becomes unbounded.
 </p>
 
 <p>
-The finite-sample adjustment $\epsilon$ is a function of the number of samples used to compute the empirical CDF. We find that when this number is less than 1000, there is almost no chance of getting a prediction set that is less than the entirety of the label space.
+The finite-sample adjustment \(\epsilon\) is a function of the number of samples used to compute the empirical CDF. We find that when this number is less than 1000, there is almost no chance of getting a prediction set that is less than the entirety of the label space.
 </p>
 
 <div>
