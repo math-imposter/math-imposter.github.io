@@ -15,7 +15,11 @@ While the focus of [Stutz’23] is on aggregating p-values across sampled labels
 </p>
 
 <p>
-In their paper, [Stutz’23] note that the coverage guarantee using the true CDF holds only asymptotically, as the empirical CDF \(\hat{F}\) approaches the true CDF \(F\). To establish a finite-sample guarantee, they introduce a DKW-derived correction \(\epsilon\) and construct the prediction sets based on \(\hat{F} + \epsilon\). We find that, although their proposed prediction set yields an elegant \((1-\alpha)(1-\delta)\) finite-sample guarantee, the \(\epsilon\) correction is extremely conservative in practice.
+In their paper, [Stutz’23] note that the coverage guarantee using the true CDF holds only asymptotically, as the empirical CDF \(\widehat{F}\) approaches the true CDF \(F\). To establish a finite-sample guarantee, they introduce a DKW-derived correction \(\epsilon\) and construct the prediction sets based on \(\widehat{F} + \epsilon\). We find that, although their proposed prediction set yields an elegant \((1-\alpha)(1-\delta)\) finite-sample guarantee, the \(\epsilon\) correction is extremely conservative in practice.
+</p>
+
+<p>
+In the experiments below, we call the [Stutz’23] ECDF method as "ECDF", and the variant with finite-sample guarantees as "ECDF-DKW".
 </p>
 
 <div>
